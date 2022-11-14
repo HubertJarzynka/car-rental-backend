@@ -1,23 +1,22 @@
 package com.kodilla.repository;
 
-import com.kodilla.domain.Vehicle;
-import com.kodilla.dto.Car;
+import com.kodilla.domain.Car;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface CarRepository extends CrudRepository<Vehicle, Long> {
+public interface CarRepository extends CrudRepository<Car, Long> {
 
     @Override
-    List<Vehicle> findAll();
+    List<Car> findAll();
 
-    List<Vehicle> findAllByBrand(String brand);
+    List<Car> findAllByBrand(String brand);
 
-    List<Vehicle> findAllByProductionYear(int productionYear);
+    List<Car> findAllByProductionYear(int productionYear);
 
-    List<Vehicle> findAllByMileage(int mileage);
+    List<Car> findAllByMileage(int mileage);
 
-    List<Vehicle> findAllByFuel(String fuel);
+    List<Car> findAllByFuel(String fuel);
 
-    List<Vehicle> findAllByDailyCost(double cost);
+    List<Car> findAllByDailyCost(double cost);
 }

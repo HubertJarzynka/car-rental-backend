@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @Table(name = "VEHICLE")
 
-public class Vehicle {
+public class Car {
 
     @Id
     @GeneratedValue
