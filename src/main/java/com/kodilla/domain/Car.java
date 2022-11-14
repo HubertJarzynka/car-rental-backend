@@ -4,6 +4,9 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -42,9 +45,15 @@ public class Car {
 
     @NotNull
     @Column(name = "DAILY_COST")
-    private double dailyCost;
+    private BigDecimal dailyCost;
 
     @NotNull
     @Column(name = "Car_STATUS")
     private Status status;
+
+    @OneToMany(targetEntity = Rental.class,
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            mappedBy = "car")
+    private List<Rental> rentalList = new ArrayList<>();
 }

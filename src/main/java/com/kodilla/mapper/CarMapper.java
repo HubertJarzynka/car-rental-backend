@@ -27,6 +27,7 @@ public class CarMapper {
 
     public CarDto mapToCarDto(final Car car){
         return CarDto.builder()
+                .id(car.getId())
                 .brand(car.getBrand())
                 .model(car.getModel())
                 .productionYear(car.getProductionYear())
