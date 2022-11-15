@@ -38,12 +38,12 @@ public class CarController {
     }
 
     @GetMapping("/mileage/{mileage}")
-    public List<CarDto> getCarsByMiLeage(@PathVariable int mileage) throws CarNotFoundException {
+    public List<CarDto> getCarsByMileage(@PathVariable int mileage) throws CarNotFoundException {
         return carFacade.getCarsByMileage(mileage);
     }
 
     @GetMapping("/fuel/{fuel}")
-    public List<CarDto> getCarsByfUELType(@PathVariable String fuel) throws CarNotFoundException {
+    public List<CarDto> getCarsByFuelType(@PathVariable String fuel) throws CarNotFoundException {
         return carFacade.getCarsByFuelType(fuel);
     }
 

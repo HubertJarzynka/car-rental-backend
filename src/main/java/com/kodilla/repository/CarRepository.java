@@ -1,6 +1,7 @@
 package com.kodilla.repository;
 
 import com.kodilla.domain.Car;
+import com.kodilla.domain.Status;
 import org.springframework.data.repository.CrudRepository;
 
 import javax.validation.constraints.NotNull;
@@ -21,4 +22,6 @@ public interface CarRepository extends CrudRepository<Car, Long> {
     List<Car> findAllByFuel(String fuel);
 
     List<Car> findAllByDailyCost(@NotNull BigDecimal dailyCost);
+
+    long countAllByStatus(Status status);
 }
