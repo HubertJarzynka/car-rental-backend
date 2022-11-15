@@ -44,6 +44,10 @@ public class Car {
     private String fuel;
 
     @NotNull
+    @Column(name = "VIN")
+    private String vin;
+
+    @NotNull
     @Column(name = "DAILY_COST")
     private BigDecimal dailyCost;
 

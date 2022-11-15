@@ -18,6 +18,7 @@ public class CarDto {
     private Long id;
     private String brand;
     private String model;
+    private String vin;
     private int productionYear;
     private int mileage;
     private String fuel;

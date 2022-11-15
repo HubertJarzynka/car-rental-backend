@@ -3,6 +3,8 @@ package com.kodilla.repository;
 import com.kodilla.domain.Car;
 import org.springframework.data.repository.CrudRepository;
 
+import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.util.List;
 
 public interface CarRepository extends CrudRepository<Car, Long> {
@@ -18,5 +20,5 @@ public interface CarRepository extends CrudRepository<Car, Long> {
 
     List<Car> findAllByFuel(String fuel);
 
-    List<Car> findAllByDailyCost(double cost);
+    List<Car> findAllByDailyCost(@NotNull BigDecimal dailyCost);
 }

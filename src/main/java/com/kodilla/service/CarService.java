@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Transactional
@@ -48,7 +49,7 @@ public class CarService {
         return carRepository.findAllByFuel(fuel);
     }
 
-    public List<Car> getCarsByDailyCost(final double cost) {
+    public List<Car> getCarsByDailyCost(final BigDecimal cost) {
         return carRepository.findAllByDailyCost(cost);
     }
 
