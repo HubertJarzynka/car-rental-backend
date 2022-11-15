@@ -32,7 +32,7 @@ public class UserFacade {
         return userMapper.mapToUserDto(userService.getUserByPhoneNumber(number));
     }
 
-    public Boolean doesMailExist(String mail) {
+    public Boolean isEmailExist(String mail) {
         return userService.isEmailExist(mail);
     }
 
