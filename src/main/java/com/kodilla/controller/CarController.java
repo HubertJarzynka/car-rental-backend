@@ -47,7 +47,7 @@ public class CarController {
         return carFacade.getCarsByFuelType(fuel);
     }
 
-    @GetMapping("/daily_cost/{cost}")
+    @GetMapping("/cost/{cost}")
     public List<CarDto> getCarsByDailyCost(@PathVariable BigDecimal cost) throws  CarNotFoundException{
         return carFacade.getCarsByDailyCost(cost);
     }
