@@ -26,7 +26,7 @@ public class UserController {
         return userFacade.getUserById(id);
     }
 
-    @GetMapping("/mali/{email}")
+    @GetMapping("/mail/{email}")
     public UserDto getUserByMail(@PathVariable String email) throws UserNotFoundException {
         return userFacade.getUserByMail(email);
     }
