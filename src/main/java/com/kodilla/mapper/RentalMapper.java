@@ -2,7 +2,6 @@ package com.kodilla.mapper;
 
 import com.kodilla.domain.Rental;
 import com.kodilla.dto.FullRentalDto;
-import com.kodilla.dto.RentalDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +17,7 @@ public class RentalMapper {
                 .id(rental.getId())
                 .rentedFrom(rental.getRentedFrom())
                 .rentedUntil(rental.getRentedUntil())
+                .cost(rental.getCost())
                 .carId(rental.getCar().getId())
                 .carBrand(rental.getCar().getBrand())
                 .carModel(rental.getCar().getModel())

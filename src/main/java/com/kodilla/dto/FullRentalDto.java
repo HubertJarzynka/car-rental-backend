@@ -2,6 +2,7 @@ package com.kodilla.dto;
 
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -15,6 +16,7 @@ public class FullRentalDto {
     private LocalDate rentedFrom;
     private LocalDate rentedUntil;
     private Long carId;
+    private BigDecimal cost;
     private String carBrand;
     private String carModel;
     private String userName;
